@@ -1,0 +1,30 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: hello-consumer
+---
+server:
+  port: 7081
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        metadata:
+          version: v1
+  profiles: dev
+
+---
+server:
+  port: 17083
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        metadata:
+          version: v2
+  profiles: prod
+
+

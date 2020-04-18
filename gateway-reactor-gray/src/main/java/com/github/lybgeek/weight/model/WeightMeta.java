@@ -5,9 +5,9 @@ import java.util.Random;
 
 /**
  *
-  * 建议使用RandomUtil类创建RandomMeta对象 
+  * 权重元数据对象
   *
-  */  
+  */
  public class WeightMeta<T> {  
      private final Random ran = new Random();
      private final T[] nodes;  

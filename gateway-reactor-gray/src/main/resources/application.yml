@@ -32,3 +32,19 @@ spring:
            uri: grayLb://hello-consumer
            predicates:
               - Path=/hello/**
+          # 通过访问http://localhost:9082/test/v1,来测试权重
+         - id: hello-consumer-v1
+           uri: lb://hello-consumer
+           predicates:
+             - Path=/test/**
+             - Weight=group1, 8
+           filters:
+             - AddRequestHeader=hello, world
+         - id: hello-consumer-v2
+           uri: lb://hello-consumer
+           predicates:
+             - Path=/test/**
+             - Weight=group1, 2
+           filters:
+             - StripPrefix=1
+

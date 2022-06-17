@@ -22,7 +22,7 @@
     <spring-boot.version>2.2.5.RELEASE</spring-boot.version>
     <spring-cloud-alibaba.version>2.2.1.RELEASE</spring-cloud-alibaba.version>
 
-    <fastjson.version>1.2.66</fastjson.version>
+    <fastjson.version>1.2.83</fastjson.version>
     <common.lang3>3.9</common.lang3>
   </properties>
 
